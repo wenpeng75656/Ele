@@ -4,10 +4,11 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.Window;
 import android.widget.RadioButton;
+
+import com.zhy.autolayout.AutoLayoutActivity;
 
 import java.util.ArrayList;
 
@@ -17,7 +18,7 @@ import fragment.HomeFragment;
 import fragment.MyFragment;
 import fragment.ShoppingCarFragment;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AutoLayoutActivity implements View.OnClickListener {
     //获得管理者
     //宋佳南
     FragmentManager manager;
