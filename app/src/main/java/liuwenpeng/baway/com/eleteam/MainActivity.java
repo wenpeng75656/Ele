@@ -19,6 +19,7 @@ import fragment.ShoppingCarFragment;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     //获得管理者
+    //我是刘文鹏
     FragmentManager manager;
     //开启事物
     FragmentTransaction transaction;
