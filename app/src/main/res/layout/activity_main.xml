@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="liuwenpeng.baway.com.eleteam.MainActivity">
+
+    <!--用来加载中间区域-->
+    <FrameLayout
+        android:id="@+id/fram"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rg">
+
+    </FrameLayout>
+
+    <RadioGroup
+        android:id="@+id/rg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:textSize="12sp"
+            android:textColor="#7171fd"
+            android:checked="true"
+            android:background="#fff"
+            android:gravity="center_horizontal"
+            android:text="月光茶人"
+            android:button="@null"
+            android:id="@+id/home_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/selector_home"/>
+
+
+        <RadioButton
+            android:textColor="#646464"
+            android:textSize="12sp"
+            android:background="#fff"
+            android:gravity="center_horizontal"
+            android:text="优惠"
+            android:button="@null"
+            android:id="@+id/disc_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/selector_disc"/>
+        <RadioButton
+            android:textColor="#646464"
+            android:textSize="12sp"
+            android:background="#fff"
+            android:gravity="center_horizontal"
+            android:text="购物车"
+            android:button="@null"
+            android:id="@+id/car_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/selector_car"/>
+
+        <RadioButton
+            android:textColor="#646464"
+            android:textSize="12sp"
+            android:background="#fff"
+            android:gravity="center_horizontal"
+            android:text="我的"
+            android:button="@null"
+            android:id="@+id/my_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/selector_my"/>
+    </RadioGroup>
+
+</RelativeLayout>
