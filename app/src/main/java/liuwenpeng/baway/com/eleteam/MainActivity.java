@@ -82,7 +82,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
     private void addList() {
-        //添加
         for(int i=0;i<4;i++){
             ShowFragment showFragment = new ShowFragment();
             switch (i){
