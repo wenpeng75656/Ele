@@ -13,7 +13,6 @@
         android:layout_above="@+id/rg">
 
     </FrameLayout>
-
     <RadioGroup
         android:id="@+id/rg"
         android:layout_width="match_parent"
@@ -21,58 +20,93 @@
         android:layout_alignParentBottom="true"
         android:orientation="horizontal">
 
-        <RadioButton
-            android:textSize="12sp"
-            android:textColor="#7171fd"
-            android:checked="true"
-            android:background="#fff"
-            android:gravity="center_horizontal"
-            android:text="月光茶人"
-            android:button="@null"
-            android:id="@+id/home_image"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+        <LinearLayout
+            android:id="@+id/ll"
+            android:orientation="vertical"
             android:layout_weight="1"
-            android:drawableTop="@drawable/selector_home"/>
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/iv1"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="48px"
+                android:layout_height="45px"
+                android:src="@mipmap/tab_home_s"/>
+            <TextView
+                android:id="@+id/tv1"
+                android:textSize="12sp"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:textColor="#7171fd"
+                android:text="月光茶人"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
 
+        <LinearLayout
+            android:id="@+id/ll2"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/iv2"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="48px"
+                android:layout_height="45px"
+                android:src="@mipmap/tab_topic"/>
+            <TextView
+                android:id="@+id/tv2"
+                android:textSize="12sp"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:textColor="#646464"
+                android:text="优惠"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
 
-        <RadioButton
-            android:textColor="#646464"
-            android:textSize="12sp"
-            android:background="#fff"
-            android:gravity="center_horizontal"
-            android:text="优惠"
-            android:button="@null"
-            android:id="@+id/disc_image"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+        <LinearLayout
+            android:id="@+id/ll3"
+            android:orientation="vertical"
             android:layout_weight="1"
-            android:drawableTop="@drawable/selector_disc"/>
-        <RadioButton
-            android:textColor="#646464"
-            android:textSize="12sp"
-            android:background="#fff"
-            android:gravity="center_horizontal"
-            android:text="购物车"
-            android:button="@null"
-            android:id="@+id/car_image"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:drawableTop="@drawable/selector_car"/>
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/iv3"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="48px"
+                android:layout_height="45px"
+                android:src="@mipmap/main_index_cart_normal"/>
+            <TextView
+                android:id="@+id/tv3"
+                android:textSize="12sp"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:textColor="#646464"
+                android:text="购物车"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
 
-        <RadioButton
-            android:textColor="#646464"
-            android:textSize="12sp"
-            android:background="#fff"
-            android:gravity="center_horizontal"
-            android:text="我的"
-            android:button="@null"
-            android:id="@+id/my_image"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+        <LinearLayout
+            android:id="@+id/ll4"
+            android:orientation="vertical"
             android:layout_weight="1"
-            android:drawableTop="@drawable/selector_my"/>
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/iv4"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="48px"
+                android:layout_height="45px"
+                android:src="@mipmap/main_index_my_normal"/>
+            <TextView
+                android:id="@+id/tv4"
+                android:textSize="12sp"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:textColor="#646464"
+                android:text="我的"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
     </RadioGroup>
 
 </RelativeLayout>

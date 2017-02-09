@@ -6,7 +6,9 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.view.Window;
-import android.widget.RadioButton;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.zhy.autolayout.AutoLayoutActivity;
 
@@ -29,10 +31,18 @@ public class MainActivity extends AutoLayoutActivity implements View.OnClickList
     DiscountFragment discountFragment;
     ShoppingCarFragment shoppingCarFragment;
     MyFragment myFragment;
-    private RadioButton home_image;
-    private RadioButton disc_image;
-    private RadioButton car_image;
-    private RadioButton my_image;
+    private LinearLayout ll;
+    private LinearLayout ll2;
+    private LinearLayout ll3;
+    private LinearLayout ll4;
+    private ImageView iv1;
+    private ImageView iv2;
+    private ImageView iv3;
+    private ImageView iv4;
+    private TextView tv1;
+    private TextView tv2;
+    private TextView tv3;
+    private TextView tv4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,14 +54,22 @@ public class MainActivity extends AutoLayoutActivity implements View.OnClickList
     }
 
     private void initView() {
-        home_image = (RadioButton) findViewById(R.id.home_image);
-        disc_image = (RadioButton) findViewById(R.id.disc_image);
-        car_image = (RadioButton) findViewById(R.id.car_image);
-        my_image = (RadioButton) findViewById(R.id.my_image);
-        home_image.setOnClickListener(this);
-        disc_image.setOnClickListener(this);
-        car_image.setOnClickListener(this);
-        my_image.setOnClickListener(this);
+        ll = (LinearLayout) findViewById(R.id.ll);
+        ll2 = (LinearLayout) findViewById(R.id.ll2);
+        ll3 = (LinearLayout) findViewById(R.id.ll3);
+        ll4 = (LinearLayout) findViewById(R.id.ll4);
+        iv1 = (ImageView) findViewById(R.id.iv1);
+        iv2 = (ImageView) findViewById(R.id.iv2);
+        iv3 = (ImageView) findViewById(R.id.iv3);
+        iv4 = (ImageView) findViewById(R.id.iv4);
+        tv1 = (TextView) findViewById(R.id.tv1);
+        tv2 = (TextView) findViewById(R.id.tv2);
+        tv3 = (TextView) findViewById(R.id.tv3);
+        tv4 = (TextView) findViewById(R.id.tv4);
+        ll.setOnClickListener(this);
+        ll2.setOnClickListener(this);
+        ll3.setOnClickListener(this);
+        ll4.setOnClickListener(this);
     }
 
     private void initData() {
@@ -106,33 +124,49 @@ public class MainActivity extends AutoLayoutActivity implements View.OnClickList
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.home_image:
+            case R.id.ll:
                 addFragment(0);
-                home_image.setTextColor(Color.parseColor("#7171fd"));
-                disc_image.setTextColor(Color.parseColor("#646464"));
-                car_image.setTextColor(Color.parseColor("#646464"));
-                my_image.setTextColor(Color.parseColor("#646464"));
+                iv1.setImageResource(R.mipmap.tab_home_s);
+                iv2.setImageResource(R.mipmap.tab_topic);
+                iv3.setImageResource(R.mipmap.main_index_cart_normal);
+                iv4.setImageResource(R.mipmap.main_index_my_normal);
+                tv1.setTextColor(Color.parseColor("#7171fd"));
+                tv2.setTextColor(Color.parseColor("#646464"));
+                tv3.setTextColor(Color.parseColor("#646464"));
+                tv4.setTextColor(Color.parseColor("#646464"));
                 break;
-            case R.id.disc_image:
+            case R.id.ll2:
                 addFragment(1);
-                disc_image.setTextColor(Color.parseColor("#7171fd"));
-                home_image.setTextColor(Color.parseColor("#646464"));
-                car_image.setTextColor(Color.parseColor("#646464"));
-                my_image.setTextColor(Color.parseColor("#646464"));
+                iv1.setImageResource(R.mipmap.tab_home);
+                iv2.setImageResource(R.mipmap.tab_topic_s);
+                iv3.setImageResource(R.mipmap.main_index_cart_normal);
+                iv4.setImageResource(R.mipmap.main_index_my_normal);
+                tv2.setTextColor(Color.parseColor("#7171fd"));
+                tv1.setTextColor(Color.parseColor("#646464"));
+                tv3.setTextColor(Color.parseColor("#646464"));
+                tv4.setTextColor(Color.parseColor("#646464"));
                 break;
-            case R.id.car_image:
+            case R.id.ll3:
                 addFragment(2);
-                car_image.setTextColor(Color.parseColor("#7171fd"));
-                disc_image.setTextColor(Color.parseColor("#646464"));
-                home_image.setTextColor(Color.parseColor("#646464"));
-                my_image.setTextColor(Color.parseColor("#646464"));
+                iv1.setImageResource(R.mipmap.tab_home);
+                iv2.setImageResource(R.mipmap.tab_topic);
+                iv3.setImageResource(R.mipmap.main_index_cart_pressed);
+                iv4.setImageResource(R.mipmap.main_index_my_normal);
+                tv3.setTextColor(Color.parseColor("#7171fd"));
+                tv2.setTextColor(Color.parseColor("#646464"));
+                tv1.setTextColor(Color.parseColor("#646464"));
+                tv4.setTextColor(Color.parseColor("#646464"));
                 break;
-            case R.id.my_image:
+            case R.id.ll4:
                 addFragment(3);
-                my_image.setTextColor(Color.parseColor("#7171fd"));
-                disc_image.setTextColor(Color.parseColor("#646464"));
-                car_image.setTextColor(Color.parseColor("#646464"));
-                home_image.setTextColor(Color.parseColor("#646464"));
+                iv1.setImageResource(R.mipmap.tab_home);
+                iv2.setImageResource(R.mipmap.tab_topic);
+                iv3.setImageResource(R.mipmap.main_index_cart_normal);
+                iv4.setImageResource(R.mipmap.main_index_my_pressed);
+                tv4.setTextColor(Color.parseColor("#7171fd"));
+                tv2.setTextColor(Color.parseColor("#646464"));
+                tv3.setTextColor(Color.parseColor("#646464"));
+                tv1.setTextColor(Color.parseColor("#646464"));
                 break;
         }
     }
